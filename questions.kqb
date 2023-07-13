@@ -1,0 +1,35 @@
+# questions.kqb
+
+any_EarlySymptoms($symptom1)
+    Select one of the early symptom the patient is suffering from?
+    ---
+    $symptom1 = select_1
+        1: Shortness of breath
+        2: Cough
+        3: Yellow Mucus
+        4: Running Nose
+        5: Rash on neck
+        
+
+any_bodypains($Symptom2)
+    Select one of the pains the patient is suffering from?
+    ---
+    $Symptom2 = select_1
+        1: Chest Pain
+        2: Throat Pain
+        3: Heart Pain
+        4: Tight Chest
+        5: Ear infections
+        
+
+check_SevereSymptoms($Symptom3)
+    Select one of the severe symptom the patient is suffering from?
+    ---
+    $Symptom3= select_1
+        1: Wheezing
+        2: Constant fever
+        3: Rapid Heart beat
+        4: Sneezing
+        5: Blindness
+        
+

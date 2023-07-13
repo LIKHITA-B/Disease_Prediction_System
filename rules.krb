@@ -1,0 +1,889 @@
+# rules.krb
+
+Shortness_Breath_check
+	use symptom1(Shortness_of_breath)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Tight_Chest
+	use Symptom2(Tight_Chest)
+	when
+		symptom1(Shortness_of_breath)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,4,)
+
+Wheezing
+	use check_SevereSymptoms(Wheezing)
+	when
+		Symptom2(Tight_Chest)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (1,)
+
+Disease_Prediction1
+	use Disease_Prediction(Asthma,Albuterol)
+	when
+		check_SevereSymptoms(Wheezing)
+
+
+Shortness_Breath_check12
+	use symptom1(Shortness_Breath_check12)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Tight_Chest12
+	use Symptom2(Tight_Chest12)
+	when
+		symptom1(Shortness_Breath_check12)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,4,)
+
+Wheezing12
+	use check_SevereSymptoms(Wheezing12)
+	when
+		Symptom2(Tight_Chest12)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (2,3,)
+
+Disease_Prediction15
+	use Disease_Prediction(Adenovirus,catiphenol)
+	when
+		check_SevereSymptoms(Wheezing12)
+
+
+Shortness_Breath_check13
+	use symptom1(Shortness_Breath_check13)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Tight_Chest13
+	use Symptom2(Tight_Chest13)
+	when
+		symptom1(Shortness_Breath_check13)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,4,)
+
+Wheezing13
+	use check_SevereSymptoms(Wheezing13)
+	when
+		Symptom2(Tight_Chest13)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (4,)
+
+Disease_Prediction16
+	use Disease_Prediction(Rotavirus,catiphenol)
+	when
+		check_SevereSymptoms(Wheezing13)
+
+
+Shortness_Breath_check14
+	use symptom1(Shortness_Breath_check14)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Tight_Chest14
+	use Symptom2(Tight_Chest14)
+	when
+		symptom1(Shortness_Breath_check14)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,4,)
+
+Wheezing14
+	use check_SevereSymptoms(Wheezing14)
+	when
+		Symptom2(Tight_Chest14)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,)
+
+Disease_Prediction33
+	use Disease_Prediction(diphtheria,cetaphilnol)
+	when
+		check_SevereSymptoms(Wheezing14)
+
+
+Shortness_Breath_check2
+	use symptom1(Shortness_Breath_check2)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Tight_Chest2
+	use Symptom2(Tight_Chest2)
+	when
+		symptom1(Shortness_Breath_check2)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (2,3,)
+
+Wheezing2
+	use check_SevereSymptoms(Wheezing2)
+	when
+		Symptom2(Tight_Chest2)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (1,)
+
+Disease_Prediction11
+	use Disease_Prediction(Anthrax,Albuterol)
+	when
+		check_SevereSymptoms(Wheezing2)
+
+
+Shortness_Breath_check3
+	use symptom1(Shortness_Breath_check3)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Tight_Chest3
+	use Symptom2(Tight_Chest3)
+	when
+		symptom1(Shortness_Breath_check3)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (2,3,)
+
+Wheezing3
+	use check_SevereSymptoms(Wheezing3)
+	when
+		Symptom2(Tight_Chest3)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (2,3,)
+
+Disease_Prediction18
+	use Disease_Prediction(Aspergillosis,Albuterol)
+	when
+		check_SevereSymptoms(Wheezing3)
+
+
+Shortness_Breath_check4
+	use symptom1(Shortness_Breath_check4)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Tight_Chest4
+	use Symptom2(Tight_Chest4)
+	when
+		symptom1(Shortness_Breath_check4)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (2,3,)
+
+Wheezing4
+	use check_SevereSymptoms(Wheezing4)
+	when
+		Symptom2(Tight_Chest4)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (4,)
+
+Disease_Prediction17
+	use Disease_Prediction(Aspergillosis,Albuterol)
+	when
+		check_SevereSymptoms(Wheezing4)
+
+Shortness_Breath_check_1
+	use symptom1(Shortness_Breath_check_1)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Tight_Chest_2
+	use Symptom2(Tight_Chest_2)
+	when
+		symptom1(Shortness_Breath_check_1)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (2,3,)
+
+Wheezing_2
+	use check_SevereSymptoms(Wheezing_2)
+	when
+		Symptom2(Tight_Chest_2)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,)
+
+Disease_Prediction35
+	use Disease_Prediction(Anthrax,Albuterol)
+	when
+		check_SevereSymptoms(Wheezing_2)
+
+
+Shortness_Breath_check_3
+	use symptom1(Shortness_Breath_check_3)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Tight_Chest_3
+	use Symptom2(Tight_Chest_3)
+	when
+		symptom1(Shortness_Breath_check_3)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (5,)
+
+Wheezing_3
+	use check_SevereSymptoms(Wheezing_3)
+	when
+		Symptom2(Tight_Chest_3)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,)
+
+Disease_Prediction36
+	use Disease_Prediction(Anthrax,telebrol)
+	when
+		check_SevereSymptoms(Wheezing_3)
+
+Cough
+	use symptom1(Cough)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (2,)
+
+Heart_Pain
+	use Symptom2(Heart_Pain)
+	when
+		symptom1(Cough)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (3,4,)
+
+Constant_fever
+	use check_SevereSymptoms(Constant_fever)
+	when
+		Symptom2(Heart_Pain)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (2,1,)
+
+Disease_Prediction2
+	use Disease_Prediction(Bronchitis,Mucinex)
+	when
+		check_SevereSymptoms(Constant_fever)
+
+
+Cough2
+	use symptom1(Cough2)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (2,)
+
+Heart_Pain2
+	use Symptom2(Heart_Pain2)
+	when
+		symptom1(Cough2)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,2)
+
+Constant_fever2
+	use check_SevereSymptoms(Constant_fever2)
+	when
+		Symptom2(Heart_Pain2)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (2,1)
+
+Disease_Prediction13
+	use Disease_Prediction(Blastomycosis,Mucinex)
+	when
+		check_SevereSymptoms(Constant_fever2)
+
+
+
+Cough3
+	use symptom1(Cough3)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (2,)
+
+Heart_Pain3
+	use Symptom2(Heart_Pain3)
+	when
+		symptom1(Cough3)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,2)
+
+Constant_fever3
+	use check_SevereSymptoms(Constant_fever3)
+	when
+		Symptom2(Heart_Pain3)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (3,4)
+
+Disease_Prediction19
+	use Disease_Prediction(Enteroviruses,Mucinex)
+	when
+		check_SevereSymptoms(Constant_fever3)
+
+
+Cough4
+	use symptom1(Cough4)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (2,)
+
+Heart_Pain4
+	use Symptom2(Heart_Pain4)
+	when
+		symptom1(Cough4)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (3,4)
+
+Constant_fever4
+	use check_SevereSymptoms(Constant_fever4)
+	when
+		Symptom2(Heart_Pain4)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (3,4)
+
+Disease_Prediction20
+	use Disease_Prediction(SARS,Tinuxphenol)
+	when
+		check_SevereSymptoms(Constant_fever4)
+
+
+Yellow_Mucus
+	use symptom1(Yellow_Mucus)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (3,)
+
+Chest_Pain
+	use Symptom2(Chest_Pain)
+	when
+		symptom1(Yellow_Mucus)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,4,)
+
+Rapid_Heart_beat
+	use check_SevereSymptoms(Rapid_Heart_beat)
+	when
+		Symptom2(Chest_Pain)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (3,)
+
+Disease_Prediction3
+	use Disease_Prediction(Chest_infection,ibuprofen)
+	when
+		check_SevereSymptoms(Rapid_Heart_beat)
+
+
+Yellow_Mucus1
+	use symptom1(Yellow_Mucus1)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (3,)
+
+Chest_Pain1
+	use Symptom2(Chest_Pain1)
+	when
+		symptom1(Yellow_Mucus1)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,4,)
+
+Rapid_Heart_beat1
+	use check_SevereSymptoms(Rapid_Heart_beat1)
+	when
+		Symptom2(Chest_Pain1)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (1,2)
+
+Disease_Prediction21
+	use Disease_Prediction(Chest_infection,ibuprofen)
+	when
+		check_SevereSymptoms(Rapid_Heart_beat1)
+
+Yellow_Mucus2
+	use symptom1(Yellow_Mucus2)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (3,)
+
+Chest_Pain2
+	use Symptom2(Chest_Pain2)
+	when
+		symptom1(Yellow_Mucus2)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,4,)
+
+Rapid_Heart_beat2
+	use check_SevereSymptoms(Rapid_Heart_beat2)
+	when
+		Symptom2(Chest_Pain2)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (4,)
+
+Disease_Prediction22
+	use Disease_Prediction(Cryptococcosis,ibuprofen)
+	when
+		check_SevereSymptoms(Rapid_Heart_beat2)
+
+
+Yellow_Mucus3
+	use symptom1(Yellow_Mucus3)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (3,)
+
+Chest_Pain3
+	use Symptom2(Chest_Pain3)
+	when
+		symptom1(Yellow_Mucus3)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (2,3,)
+
+Rapid_Heart_beat3
+	use check_SevereSymptoms(Rapid_Heart_beat3)
+	when
+		Symptom2(Chest_Pain3)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (1,4)
+
+Disease_Prediction23
+	use Disease_Prediction(MERS,rectophol)
+	when
+		check_SevereSymptoms(Rapid_Heart_beat3)
+
+Yellow_Mucus4
+	use symptom1(Yellow_Mucus4)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (3,)
+
+Chest_Pain4
+	use Symptom2(Chest_Pain4)
+	when
+		symptom1(Yellow_Mucus4)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (2,3,)
+
+Rapid_Heart_beat4
+	use check_SevereSymptoms(Rapid_Heart_beat4)
+	when
+		Symptom2(Chest_Pain4)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (2,3)
+
+Disease_Prediction24
+	use Disease_Prediction(Bordetella,rectophol)
+	when
+		check_SevereSymptoms(Rapid_Heart_beat4)
+
+
+Running_Nose
+	use symptom1(Running_Nose)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (4,)
+
+Throat_Pain
+	use Symptom2(Throat_Pain)
+	when
+		symptom1(Running_Nose)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (2,)
+
+Sneezing
+	use check_SevereSymptoms(Sneezing)
+	when
+		Symptom2(Throat_Pain)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (4,)
+
+Disease_Prediction4
+	use Disease_Prediction(Common_cold,diphenhydramine)
+	when
+		check_SevereSymptoms(Sneezing)
+
+
+
+Running_Nose1
+	use symptom1(Running_Nose1)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (4,)
+
+Throat_Pain1
+	use Symptom2(Throat_Pain1)
+	when
+		symptom1(Running_Nose1)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (2,)
+
+Sneezing11
+	use check_SevereSymptoms(Sneezing11)
+	when
+		Symptom2(Throat_Pain1)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (1,2)
+
+Disease_Prediction29
+	use Disease_Prediction(Mumps,diphenhydramine)
+	when
+		check_SevereSymptoms(Sneezing11)
+
+
+Running_Nose2
+	use symptom1(Running_Nose2)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (4,)
+
+Throat_Pain2
+	use Symptom2(Throat_Pain2)
+	when
+		symptom1(Running_Nose2)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (2,)
+
+Sneezing2
+	use check_SevereSymptoms(Sneezing2)
+	when
+		Symptom2(Throat_Pain2)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (3,)
+
+Disease_Prediction25
+	use Disease_Prediction(Socioeconomic,diphenhydramine)
+	when
+		check_SevereSymptoms(Sneezing2)
+
+
+Running_Nose3
+	use symptom1(Running_Nose3)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (4,)
+
+Throat_Pain3
+	use Symptom2(Throat_Pain3)
+	when
+		symptom1(Running_Nose3)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,3)
+
+Sneezing3
+	use check_SevereSymptoms(Sneezing3)
+	when
+		Symptom2(Throat_Pain3)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (1,3)
+
+Disease_Prediction26
+	use Disease_Prediction(BIPAP,diphenhydramine)
+	when
+		check_SevereSymptoms(Sneezing3)
+
+
+Running_Nose4
+	use symptom1(Running_Nose4)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (4,)
+
+Throat_Pain4
+	use Symptom2(Throat_Pain4)
+	when
+		symptom1(Running_Nose4)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,3)
+
+Sneezing4
+	use check_SevereSymptoms(Sneezing4)
+	when
+		Symptom2(Throat_Pain4)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (2,4)
+
+Disease_Prediction27
+	use Disease_Prediction(CPAP,diphenhydramine)
+	when
+		check_SevereSymptoms(Sneezing4)
+
+
+Running_Nose500
+	use symptom1(Running_Nose500)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (4,)
+
+Throat_Pain500
+	use Symptom2(Throat_Pain500)
+	when
+		symptom1(Running_Nose500)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (4,)
+
+Sneezing550
+	use check_SevereSymptoms(Sneezing550)
+	when
+		Symptom2(Throat_Pain500)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (2,4,)
+
+Disease_Prediction300
+	use Disease_Prediction(Common_cold,diphenhydramine)
+	when
+		check_SevereSymptoms(Sneezing550)
+
+
+
+Running_Nose55
+	use symptom1(Running_Nose55)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (4,)
+
+Throat_Pain5
+	use Symptom2(Throat_Pain5)
+	when
+		symptom1(Running_Nose55)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (4,)
+
+Sneezing5
+	use check_SevereSymptoms(Sneezing5)
+	when
+		Symptom2(Throat_Pain5)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (1,3,)
+
+Disease_Prediction31
+	use Disease_Prediction(Neisseria,diphenhydramine)
+	when
+		check_SevereSymptoms(Sneezing5)
+
+
+Rash_on_neckq
+	use symptom1(Rash_on_neckq)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (5,)
+
+Ear_infectionsq
+	use Symptom2(Ear_infectionsq)
+	when
+		symptom1(Rash_on_neckq)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,2,)
+
+Blindnessq
+	use check_SevereSymptoms(Blindnessq)
+	when
+		Symptom2(Ear_infectionsq)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,1,2,)
+
+Disease_Predictionq
+	use Disease_Prediction(Measles,naproxen)
+	when
+		check_SevereSymptoms(Blindnessq)
+
+
+
+
+Rash_on_neck_0
+	use symptom1(Rash_on_neck_0)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (5,)
+
+Ear_infections_0
+	use Symptom2(Ear_infections_0)
+	when
+		symptom1(Rash_on_neck_0)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,2,)
+
+Blindness_0
+	use check_SevereSymptoms(Blindness_0)
+	when
+		Symptom2(Ear_infections_0)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (3,4,)
+
+Disease_Prediction_0
+	use Disease_Prediction(Measles,naproxen)
+	when
+		check_SevereSymptoms(Blindness_0)		
+
+
+
+Rash_on_necks
+	use symptom1(Rash_on_necks)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (5,)
+
+Ear_infectionss
+	use Symptom2(Ear_infectionss)
+	when
+		symptom1(Rash_on_necks)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (3,4,5)
+
+Blindnesss
+	use check_SevereSymptoms(Blindnesss)
+	when
+		Symptom2(Ear_infectionss)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,1,2)
+
+Disease_Predictions
+	use Disease_Prediction(Measles,naproxen)
+	when
+		check_SevereSymptoms(Blindnesss)
+
+Rash_on_necksNw
+	use symptom1(Rash_on_necksNw)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (5,)
+
+Ear_infectionsnw
+	use Symptom2(Ear_infectionsnw)
+	when
+		symptom1(Rash_on_necksNw)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (3,4,5)
+
+Blindnesssnw
+	use check_SevereSymptoms(Blindnesssnw)
+	when
+		Symptom2(Ear_infectionsnw)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (3,4)
+
+Disease_Predictionsnw
+	use Disease_Prediction(Measles,naproxen)
+	when
+		check_SevereSymptoms(Blindnesssnw)
+
+
+Rash_on_nec
+	use symptom1(Rash_on_nec)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (4,)
+
+Ear_infectio
+	use Symptom2(Ear_infectio)
+	when
+		symptom1(Rash_on_nec)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (5,)
+
+Blindne
+	use check_SevereSymptoms(Blindne)
+	when
+		Symptom2(Ear_infectio)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,)
+
+Disease_Predictio
+	use Disease_Prediction(Measles,naproxen)
+	when
+		check_SevereSymptoms(Blindne)
+
+
+Rash_on_
+	use symptom1(Rash_on_)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (4,)
+
+Ear_inf
+	use Symptom2(Ear_inf)
+	when
+		symptom1(Rash_on_)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,2,3,4)
+
+Blind
+	use check_SevereSymptoms(Blind)
+	when
+		Symptom2(Ear_inf)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,)
+
+Disease_Pred
+	use Disease_Prediction(Measles,naproxen)
+	when
+		check_SevereSymptoms(Blind)
+
+
+Rash_on_1
+	use symptom1(Rash_on_1)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (3,)
+
+Ear_inf1
+	use Symptom2(Ear_inf1)
+	when
+		symptom1(Rash_on_1)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,2,3,4)
+
+Blind1
+	use check_SevereSymptoms(Blind1)
+	when
+		Symptom2(Ear_inf1)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,)
+
+Disease_Pred1
+	use Disease_Prediction(Measles,naproxen)
+	when
+		check_SevereSymptoms(Blind1)
+
+Rash_on_2
+	use symptom1(Rash_on_2)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (2,)
+
+Ear_inf2
+	use Symptom2(Ear_inf2)
+	when
+		symptom1(Rash_on_2)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,2,3,4)
+
+Blind2
+	use check_SevereSymptoms(Blind2)
+	when
+		Symptom2(Ear_inf2)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,)
+
+Disease_Pred2
+	use Disease_Prediction(Measles,naproxen)
+	when
+		check_SevereSymptoms(Blind2)
+
+
+Rash_on_3
+	use symptom1(Rash_on_3)
+	when
+		questions.any_EarlySymptoms($symptom1)
+		check $symptom1 in (1,)
+
+Ear_inf3
+	use Symptom2(Ear_inf3)
+	when
+		symptom1(Rash_on_3)
+		questions.any_bodypains($Symptom2)
+		check $Symptom2 in (1,4,)
+
+Blind3
+	use check_SevereSymptoms(Blind3)
+	when
+		Symptom2(Ear_inf3)
+		questions.check_SevereSymptoms($Symptom3)
+		check $Symptom3 in (5,)
+
+Disease_Pred3
+	use Disease_Prediction(Measles,naproxen)
+	when
+		check_SevereSymptoms(Blind3)
+
+
+
+
+
